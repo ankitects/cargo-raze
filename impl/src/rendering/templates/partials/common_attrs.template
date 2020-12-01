@@ -23,6 +23,9 @@
     {%- if crate.raze_settings.data_attr %}
     data = {{crate.raze_settings.data_attr}},
     {%- endif %}
+    {%- if crate.raze_settings.compile_data_attr %}
+    compile_data = {{crate.raze_settings.compile_data_attr}},
+    {%- endif %}
     edition = "{{ target.edition }}",
     {%- if crate.default_deps.proc_macro_dependencies %}
     proc_macro_deps = [
